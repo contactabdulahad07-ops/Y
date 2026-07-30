@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise | Falak ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation" id="bgAnim"></div>
+
+    <!-- Scene 1: Password Screen -->
+    <section id="scene1" class="scene active">
+        <div class="glass-card">
+            <div class="lock-icon">🔒</div>
+            <h1>Private Birthday Surprise ❤️</h1>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Enter Password...">
+                <p id="errorMsg" class="error-text">Incorrect Password. Hint: Her Name + 123</p>
+            </div>
+            <button onclick="checkPassword()" class="btn-gold">Unlock Magic</button>
+        </div>
+    </section>
+
+    <!-- Scene 2: Welcome Screen -->
+    <section id="scene2" class="scene">
+        <div class="welcome-container">
+            <div class="teddies">
+                <div class="teddy-box">
+                    <div class="teddy pink-teddy"></div>
+                    <span>Me</span>
+                </div>
+                <div class="cake-icon">🎂</div>
+                <div class="teddy purple-teddy"></div>
+                <span>Falak ❤️</span>
+            </div>
+            <button onclick="nextScene(3)" class="btn-primary">Open Surprise</button>
+        </div>
+    </section>
+
+    <!-- Scene 3: Heart Game -->
+    <section id="scene3" class="scene">
+        <div class="game-container">
+            <h2>Catch 10 Hearts for Falak! ❤️</h2>
+            <div class="score-board">Score: <span id="score">0</span> / 10</div>
+            <div id="game-area"></div>
+        </div>
+    </section>
+
+    <!-- Scene 4: Cake Cutting -->
+    <section id="scene4" class="scene">
+        <div class="cake-cutting-container">
+            <div class="cake-wrapper">
+                <div class="cake" id="mainCake">
+                    <div class="candle-container">
+                        <div class="candle"></div>
+                        <div class="candle"></div>
+                        <div class="candle"></div>
+                        <div class="candle"></div>
+                        <div class="candle"></div>
+                    </div>
+                    <div class="layer layer1"></div>
+                    <div class="layer layer2"></div>
+                    <div class="layer layer3"></div>
+                </div>
+                <div class="knife" id="knife"></div>
+            </div>
+            <button id="cutBtn" onclick="cutCake()" class="btn-gold">Cut Cake</button>
+        </div>
+    </section>
+
+    <!-- Scene 5: Promise -->
+    <section id="scene5" class="scene">
+        <div class="glass-card promise-card">
+            <p class="promise-text">Promise me you'll always keep smiling and stay happy. ❤️</p>
+            <button onclick="nextScene(6)" class="btn-gold">I Promise 💍</button>
+        </div>
+    </section>
+
+    <!-- Scene 6: Love Screen -->
+    <section id="scene6" class="scene">
+        <div class="love-hero">
+            <h1 class="glow-text">I LOVE YOU ❤️</h1>
+            <h3>Happy Birthday Falak ❤️</h3>
+            <button onclick="startLetter()" class="btn-primary">Read My Letter</button>
+        </div>
+    </section>
+
+    <!-- Scene 7: Final Love Letter -->
+    <section id="scene7" class="scene">
+        <div class="letter-paper">
+            <div id="typewriter" class="letter-content"></div>
+            <button id="playAgainBtn" style="display:none;" onclick="location.reload()" class="btn-gold">Play Again</button>
+        </div>
+    </section>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+              </html>
